@@ -35,6 +35,8 @@ No automated tests yet. Manually verify it's up:
 
 ```
 curl http://localhost:7051/health   # -> OK
+curl http://localhost:7051/provinces | jq
+curl http://localhost:7051/provinces/{province}/hubs | jq
 ```
 
 To add real tests, add JUnit 5 + the Surefire plugin to `pom.xml`, put tests under
